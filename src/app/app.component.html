@@ -1,6 +1,17 @@
 <input type="text" [(ngModel)]="name">
 <p>{{ name }}</p>
 
-<input type="text" [(ngModel)]="userName">
-<p>{{ userName }}</p>
+<hr>
+<input 
+    type="text" [(ngModel)]="username">
+<p>
+    {{ username }}
+</p>
+<button 
+    class="btn btn-primary"
+    (click)="onClearUsername()"
+    [disabled]="username === ''">
+    Clear username
+</button>
+<hr>
 <app-success></app-success>
