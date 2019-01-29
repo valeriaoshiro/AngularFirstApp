@@ -15,3 +15,19 @@
 </button>
 <hr>
 <app-success></app-success>
+<hr>
+<button 
+    class="btn btn-primary"
+    (click)="togglePassword()">
+    Display Details
+</button>
+<p
+    *ngIf="showPassword">
+    Secret Password = tuna
+</p>
+<p 
+    *ngFor="let elem of showPasswordArray; let i = index"
+    [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+    [ngClass]="{whiteBackground: i >= 4}">
+    {{ elem }} {{ i }}
+</p>

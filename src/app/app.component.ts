@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = 'Vale';
   username = '';
+  showPassword = false;
+  showPasswordArray = [];
 
   onClearUsername(){
     this.username = '';
+  }
+
+  togglePassword(){
+    this.showPassword = !this.showPassword;
+    this.showPasswordArray.push(new Date());
+    console.log(this.showPasswordArray);
   }
 }
